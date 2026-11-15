@@ -19,3 +19,4 @@ Thumbs.db
 tmp/
 report-build.txt
 !historical-lean/**/*.log
+!lean/**/*.log

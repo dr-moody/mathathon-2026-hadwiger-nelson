@@ -1,0 +1,9 @@
+ℹ [2/3] Built ThreeCentrePaletteCore (12s)
+info: ThreeCentrePaletteCore.lean:49:0: 'Mathathon.ThreeCentrePaletteCore.no_three_disjoint_palettes' does not depend on any axioms
+info: ThreeCentrePaletteCore.lean:50:0: @Mathathon.ThreeCentrePaletteCore.no_three_disjoint_palettes : ∀ {Label : Type} (P Q R J K : Label → Prop) (X : Label),
+  (∀ (i : Label), ¬(J i ∨ K i) ↔ i = X) →
+    (∀ (i : Label), J i → P i) →
+      (∀ (i : Label), P i → Q i → False) →
+        (∀ (i : Label), P i → R i → False) →
+          (∀ (i : Label), Q i → R i → False) → (∃ i, Q i ∧ ¬K i) → (∃ i, R i ∧ ¬K i) → False
+Build completed successfully (3 jobs).

@@ -1,0 +1,42 @@
+{
+  "status": "Lean 4.35.0 verified: logical palette core only",
+  "timestamp_utc": "2026-11-15T19:19:48.697310+00:00",
+  "declaration": "Mathathon.ThreeCentrePaletteCore.no_three_disjoint_palettes",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_tag": "v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "mathlib_imported_by_theorem": false,
+  "command": "lake --no-ansi build",
+  "exit_code": 0,
+  "axioms": [],
+  "admissions": false,
+  "source_sha256": "e4394d5e7b545b63c9a1e442780cf32b55cc1c5fdd8e24454e2640c02a4fea0e",
+  "scope": "The finite palette-counting contradiction, with all palette/state consequences explicit as hypotheses. Not trace existence, geometry, analytic fixed/moving separation, or the global colouring theorem.",
+  "build_environment_note": "Dependency sources were reused through a local junction inside the isolated workspace. The delivered package excludes .lake and contains ordinary git dependency pins; it needs normal Lake dependency checkout on a fresh machine.",
+  "files": [
+    {
+      "path": "ThreeCentrePaletteCore.lean",
+      "sha256": "e4394d5e7b545b63c9a1e442780cf32b55cc1c5fdd8e24454e2640c02a4fea0e"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "ec15977a90bbfefc88be9aa2bbbb8fc11ce92b2eef62c30fcd6d318f2d724029"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "87f340589a62c00a3b562f5c29cae7da810dc471ca380a5320a39e7649f1d962"
+    },
+    {
+      "path": "README.md",
+      "sha256": "85ec34dd234da003fbc0729278c71d6cce65b0f8dd5224cb932956794f4b3675"
+    },
+    {
+      "path": "build.log",
+      "sha256": "b3ed80f6843cbefe99af5b1e1abd8d69981245a2c991ce174dbc7a8bc3404159"
+    }
+  ]
+}
