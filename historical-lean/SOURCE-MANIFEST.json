@@ -1,0 +1,339 @@
+{
+  "meaning": "Complete accepted R1 + S2 source snapshot, copied before port edits; not freshly rebuilt here.",
+  "lean": "4.34.1",
+  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "modules": [
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Basic.lean",
+      "sha256": "6db8eef0290bb1962405e338d049d19a1a77ff9e58a50251ca0aa6835c2b3d16"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Characters.lean",
+      "sha256": "3879bd9d07340af833a1350db7add3ab03d856af920410ce7bb9c24dc17d5f07"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/CircleDecay.lean",
+      "sha256": "9bb6565ac259d8c9be8c7321bb1d05eabe0af087f6c20bbff09fd3e430441a81"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/CircleOperator.lean",
+      "sha256": "1a1523f435af9f6efbb10806ef4dc5ccd76f69b226642b997ad0c98398287de1"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/ConditionalSpectrum.lean",
+      "sha256": "fcb77a76a2023bce5438bd5736984c50f07ba5f6e82cd1b765a8aa550eef693f"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Energy.lean",
+      "sha256": "10895c85c9d1ca9be76885fec41c4a1c63dc009ce0e6b2d4e8af47b16dc1adca"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Ergodicity.lean",
+      "sha256": "e2a051cb348eae1aa59f225e1ca31a2846b6002aa7e25b33cd4aaf2e95cdce58"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Fourier.lean",
+      "sha256": "315079396f8612ab5dea11fe22913e20a73e780862fba140148dd57ad4655a05"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/FourierTests.lean",
+      "sha256": "73910dcd4dfda8fcf3491dccabe81d99322abe3452d5939859315a1895c29216"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/InvariantMean.lean",
+      "sha256": "db71947b617c30ef32bff4cb2761ba9979d91339c216713213cb5e3a3952d769"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Multipliers.lean",
+      "sha256": "9437aff41e64bac8f6b4d476f1471e82bd42368f1fc839823474504f1b6949c3"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/NumberFields.lean",
+      "sha256": "c6a85c32cc4f60fd489dfbafe47d53119694868fc32d22bace36e2a3bfa55d10"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/PhaseCollision.lean",
+      "sha256": "01d0a2f337e6f80cce42f67566df0109bbaddf2dc44df131aafe9b3648557f98"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/PhaseEncoding.lean",
+      "sha256": "e941182ef95925e8472e94f79b1cc8adce7ee289f626d87f06d6d8092270ec54"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/RadialEnergy.lean",
+      "sha256": "63c62d5012e93cd8c624a4b478758b443b29a9d598752c51aa150eda6d61f90a"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Representations.lean",
+      "sha256": "a2880f4e65bdbf701589b4ea50e35fae7e1fec623cf0c32a1060c6636578d799"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/Selections.lean",
+      "sha256": "42c6862dc63d323c7e8812eedb3bd139e4fe2a9dd9a0e0763be2a1333110a2e4"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/SmallArcs.lean",
+      "sha256": "9c317fcfa15cf19a00aef927007704e78cf33269bb82d45065cb8a95160fe690"
+    },
+    {
+      "path": "OAI/Analysis/PlaneSpectrum/SpectralMeasure.lean",
+      "sha256": "376c8087607945e0074d19c28516a73e05e91a272593c45019b623d9739af96b"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Accumulation.lean",
+      "sha256": "9ce956ea280b7eddab8c1f903c0b489c96678ed244b59c0f6d147c888e06d5d0"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/AngularBoundary.lean",
+      "sha256": "796414de07e4fb2ce5ae862530bc85742e6ba318ce6c12307644265d08e6c663"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Assembly.lean",
+      "sha256": "21f6c857dec95c04e9e33c2f23b6fd850d65d3e578d461a066c095ecf547f45c"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/AvoidingTrace.lean",
+      "sha256": "442686edc8e5b95c9e6781a8ec6b3e84faa07597f8ec168c6635bd6e04e9c786"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Basic.lean",
+      "sha256": "aa83475b51cfaf01afed7fcb455e216b912d7a915e1f996e1c9348a68a92fbfa"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/BinaryDynamics.lean",
+      "sha256": "c311b43e8dccf1774a669ebc4da8a13698d0f35449fa43a976776187194649bc"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/BinaryPalettes.lean",
+      "sha256": "5e2ffdb80a1afd9101bf21b9e5a81a1874fb5dcc91ca485ae0679ac75eca25b3"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/BorelTransfer.lean",
+      "sha256": "4e90138bb6baea8806982342fb74ec4aa702c4edb35645a11a732fe67887c441"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/BoundaryTrace.lean",
+      "sha256": "6bb884aa073edd320672ede4145b8488af533c82550606603ea3da49683ab017"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Chromatic.lean",
+      "sha256": "55a2f2bef340156617f0679f65813d952f19c876e975399463b5bdcd4002127b"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/CircleMaps.lean",
+      "sha256": "7129ae59fd2ec00b6aa7ec3e366bf88b18abfa08591515af4c6796b51937dd66"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/CircleTransport.lean",
+      "sha256": "e5697b3b1f80c97f7b6af13d0ee4af07ff69b39a00daba69aa0f299ad7b2dac5"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Coloring.lean",
+      "sha256": "70a2f493ed99008d6a6c37da50c32c22461832469773352406178790fa078898"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Compactness.lean",
+      "sha256": "51897e8f294ca13bc33798bf36c3ee3f9bccd1b40e9ae628dc1184bf5d598930"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/ContinuumLimits.lean",
+      "sha256": "cfa79b5f6d8e9449b0ef6beb8a8d40265cec5a9d939dfb14979389fed5081ca0"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Converse.lean",
+      "sha256": "5bde95d2ec3cb518a2ece36f544b69eb25f550f3f2f231a7df5c8a9ba4098248"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Covering.lean",
+      "sha256": "513a8ef4ebc13d27935444ffb8b5992df7172ce105f3a1fb6861c66f270246be"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/CyclicCore.lean",
+      "sha256": "d55a1601a3d9d3679cc2ae6d16302f1eac71d71ace20a21c276c81e2e3d164ab"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/DiskAverages.lean",
+      "sha256": "5545ba34d956a96958f01dc30204fc9dd338aac73221caeaddb4c6a9afcb435f"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/DiskExtension.lean",
+      "sha256": "ef64358d8261d6a96c8b03469bee12f2ab0abd4647a9f1230b41059fc914ac64"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Exclusion.lean",
+      "sha256": "1613d1543f72813e05301a0e141e684bb4289e65a8d4905cc4f47b32057c8b67"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Expansion.lean",
+      "sha256": "b3684b996cc4bbf40eaf5697b8fa747b053f4c098f585f17e2e4298a21e4e348"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Five.lean",
+      "sha256": "1501dc05d43d6b425b94b3bb4556493524b6877810c3c9c9d8ac5513adf16246"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/FiveSupport.lean",
+      "sha256": "b12dad93faddcbaf07dcb6e92a86c36ffb1e3a80f62192e64916ae936599eb65"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/FourContinuity.lean",
+      "sha256": "46efa82aa091fd03ebe10a4d61142f96ad4f8a8533d7c84fa2d8117d5e18c6c9"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/FourTransport.lean",
+      "sha256": "c9b8af1a459b9cf0624a528be8568e255dc0a21e0fc3fd16b35b34e319692090"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/FullApproximation.lean",
+      "sha256": "a9d170e253708ded472c858cc34fcba5c56db4263dff97981ae9f6f8989741c2"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/GraphCuts.lean",
+      "sha256": "9aa4f41d6e5ffc105ef0d1e416491e0c7dce2fd59735179545730098a4f06830"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/GraphPatches.lean",
+      "sha256": "5c29ae6acfa0868df4b791dd54514c0d1aaf26d5e5901c4a58e154ae13f1986d"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/GraphRealization.lean",
+      "sha256": "def12054e6260a4b85dfd13d19a06dc6355f39fb8cbeadbfe1ef1fa45f2e2d7a"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/HoleApproximation.lean",
+      "sha256": "cbee4d2ae2fcf691333a7d21b274ddbb549cc30d39d00918f873e75b2c50176e"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Interfaces.lean",
+      "sha256": "c3348acdd555cc4196de9c9f14f1f32cb37f2f59dbfd54fccf591a3303b88e02"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Lattice.lean",
+      "sha256": "688cc2b73931dbdd4a05148d5c8e53d155ce976d587d40308c627a53a2db669f"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/MeasurableAssembly.lean",
+      "sha256": "6e74fcbbb6eb60de57bfb071e0f35337a133837bb346a9b399dbc83bb7b7eba5"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/MeasurableProper.lean",
+      "sha256": "c679837b22a5025df77fc8373345505ce1a2f9d965d23304eda474530853470d"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Mesh.lean",
+      "sha256": "72b37edd188838984f85fbdde4ffed966a765eaea3e61386e04e95b7c615cb83"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Metric.lean",
+      "sha256": "9a17c98379c16936d5f797285a79b6f2c0fec2f82c427237727c9d8bba1aa7bc"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Moser.lean",
+      "sha256": "b2da0e254b41919a3858d23acf72bc643339871d1a4f0951d5ceb32f1a3fedcf"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/NullSetRobust.lean",
+      "sha256": "887a6bbe6b83f87a3baf60823cf586a4b2f9539e3549697caa9732942d627cc9"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/PaletteDensity.lean",
+      "sha256": "24d1525a3efafe117962d32aff754f30949371234d7d14f3099361e1c0b0d68c"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Palettes.lean",
+      "sha256": "74585bde311823dbb9b9fbabce6ec89415134a8b298f7da66c31207e37e2646b"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/PaletteTransport.lean",
+      "sha256": "2d9b386950a8f25445838c43908dc7ced2be5932435c6e65fb80509b55eea196"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/PlanarCovers.lean",
+      "sha256": "9d4aa090cf4ee5059718a65eaaf8ff4b7c3109ebfd2fdb2e513def1353f33d47"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Rigidity.lean",
+      "sha256": "070063c9ba455dcb415a7e1ac400dfbcd11b39a0da699a409351918e6127f91d"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Sectors.lean",
+      "sha256": "8acd47b52ea091d61506b8cbf529be6f59626812e90dddec6c7c1de7430e9e62"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Seven.lean",
+      "sha256": "9184597732dc911bb6c327e61fc367c6d5adea54f3aaf7faef3b746009825caa"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/States.lean",
+      "sha256": "7b411cc583485431fa957070a8d4c678ed35ba8cc7cec8b465925a0e03744520"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Transfer.lean",
+      "sha256": "5873693afeb24b1896a745b43c87b26ef30ec1ae110a67b1f537a3a6d4af5600"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/Transitions.lean",
+      "sha256": "f12a35efaefe92d2c898a69830c26d1d90647bf6c49161c2e0beccbde5e5d1f9"
+    },
+    {
+      "path": "OAI/Geometry/PlaneColoring/WeakColoring.lean",
+      "sha256": "7994f86994c903d2fb76cb60dcbe02cbb3f53047d282d42170122b578bf3c90b"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/AlgebraModels.lean",
+      "sha256": "188d8530a646f70af95b1b824ba060fe17fe95b3cc1cb40251eb05f226e24298"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Amenability.lean",
+      "sha256": "08d0ae62ede2e89c3328801e0cbd5fbbde35c1cb8d4af3ae39e4f6406b9f8c19"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Approximation.lean",
+      "sha256": "f6adcc691c345ddbe4fad40746f2e0da11be96b961c528f49af01e9ea8e5c30d"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/BoundedFunctions.lean",
+      "sha256": "f1750185aa305ce18f0937b6949d898d686e2dcdc297606f7c14aef5607bc58e"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Centers.lean",
+      "sha256": "51a370e921f6fcb8825d502538d5871d53bcb4f546f0d95580351bb63275019c"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/ConditionalLimits.lean",
+      "sha256": "675f780669891ce6ff5bc604670da0be6c1f12391ee6eac052598a444807396a"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/ConditionalSelection.lean",
+      "sha256": "2f19feac00b8ec75d265e04707bdda09aecb6bfb44965d34646f568743ca8e66"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Factors.lean",
+      "sha256": "548ec497e431bf2cff7165b4b0ce39f6d8a5b7542dcfe476ac67a30d4ea6c291"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Functions.lean",
+      "sha256": "c3ffaf6e817bf4fdcc8f51d9355c7b6a56d2a6a2e22c835b6d463845cf60e902"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Kernels.lean",
+      "sha256": "8665ae62def8d70befc2929f9ae787f15b68e5c007a95c3257c011823059fe89"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/RelativeCenters.lean",
+      "sha256": "40010491b6e6f343d1b4191471f930fb5b18817a29a072c4180fbbfa8e03eb13"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/RelativeProducts.lean",
+      "sha256": "f5abd2b8e32dae69da826d234f3310c41813989deb1438c0354795935c4c8d76"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Separability.lean",
+      "sha256": "bd2e5ea3afc7843aa5d2d269882c92db1cc8cb3779fd5d2108a1f8e936c01c1c"
+    },
+    {
+      "path": "OAI/MeasureTheory/CompactFactors/Stationary.lean",
+      "sha256": "1b4f0f1ce88a8794a18bbef836f0e9914d7b0180ac93f5730adf2148676b7723"
+    }
+  ]
+}
