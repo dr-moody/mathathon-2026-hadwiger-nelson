@@ -26,7 +26,8 @@ and local results about interfaces at a common centre}
 \author{Jarom Moody\\
 Track: Combinatorics\\
 Repository: \url{https://github.com/dr-moody/mathathon-2026-hadwiger-nelson}\\
-Supporting-source revision: \texttt{a05c6d1d3f75a986c56956ef9cde31d549850475}}
+Optional Lean project: \texttt{lean/}\\
+Supporting-source revision: \texttt{23357553beb0d4998bebb4342157ea4f05bd1792}}
 \date{15 November 2026}
 
 \begin{document}
@@ -57,11 +58,19 @@ Each main claim is marked with one of the following labels.
 \begin{itemize}
 \item \st{cited}: prior work, chiefly the supplied manuscript.
 \item \st{proved}: a paper argument that has been independently reviewed (ledger \texttt{PROVED\_\allowbreak{}PAPER\_\allowbreak{}REVIEWED}), or a short argument given in full in this report.
-\item \st{Lean 4.34.1}: checked in Lean~4.34.1 with archived logs, using only the axioms \texttt{propext}, \texttt{Classical.\allowbreak{}choice} and \texttt{Quot.sound}. \textbf{Every Lean check in this report ran on Lean~4.34.1 with the pinned mathlib commit \texttt{d13f23b}.} The event's optional Lean track requires Lean~4.35.0. A bounded port to 4.35.0 is being attempted; until it succeeds we claim nothing beyond 4.34.1, do not claim the optional Lean-track verification, and do not call these results ``Lean-verified'' in the event's sense.
+\item \st{Lean 4.34.1}: historical checks in Lean~4.34.1 with pinned mathlib
+\texttt{d13f23b}, using only \texttt{propext}, \texttt{Classical.\allowbreak{}choice}
+and \texttt{Quot.sound}. These checks do not establish the event's required
+Lean/mathlib~4.35.0 verification.
+\item \st{Lean 4.35.0 core}: a new successful build of the isolated logical
+palette-counting implication in Section~3.8, with an empty axiom list. It
+imports only \texttt{Init}. Mathlib~v4.35.0 is pinned for the required project
+environment but is not used by this theorem. This does not verify the analytic
+production of palettes or the full separation theorem under the new version.
 \item \st{computation}: an exact computation over a stated finite object.
 \item \st{illustration}: a model or picture that explains a statement but is not part of any proof.
 \end{itemize}
-These labels map onto the team's results ledger (\texttt{Hadwiger\allowbreak{}Nelson/\allowbreak{}RESULTS-\allowbreak{}LEDGER.\allowbreak{}md}), which gives every result an identifier, a statement, its hypotheses, artifact paths and SHA-256 hashes. Ledger status \texttt{LEAN\_\allowbreak{}VERIFIED} is our \st{Lean 4.34.1}; \texttt{PROVED\_\allowbreak{}PAPER\_\allowbreak{}REVIEWED} is \st{proved}; \texttt{TESTED\_\allowbreak{}FINITE} is \st{computation}. Ledger entries marked \texttt{CANDIDATE}, \texttt{UNAUDITED\_\allowbreak{}NUMBER} or \texttt{OPEN} are not claimed as results in this report.
+The historical labels map onto the team's results ledger (\texttt{Hadwiger\allowbreak{}Nelson/\allowbreak{}RESULTS-\allowbreak{}LEDGER.\allowbreak{}md}), which gives every result an identifier, a statement, its hypotheses, artifact paths and SHA-256 hashes. Ledger status \texttt{LEAN\_\allowbreak{}VERIFIED} is our \st{Lean 4.34.1}; \texttt{PROVED\_\allowbreak{}PAPER\_\allowbreak{}REVIEWED} is \st{proved}; \texttt{TESTED\_\allowbreak{}FINITE} is \st{computation}. Ledger entries marked \texttt{CANDIDATE}, \texttt{UNAUDITED\_\allowbreak{}NUMBER} or \texttt{OPEN} are not claimed as results in this report.
 
 %======================================================================
 \section{Introduction}
@@ -330,6 +339,36 @@ Declaration & Claim supported & Difference from prose\\
 \end{tabularx}
 \end{center}
 \noindent Evidence: \texttt{outputs/\allowbreak{}three-\allowbreak{}centre/\allowbreak{}VALIDATION.\allowbreak{}txt} records a pass under Lean~4.34.1 with standard axioms and no admissions. \texttt{MOVING-\allowbreak{}VALIDATION.\allowbreak{}txt} lists the axioms \texttt{[propext, Classical.\allowbreak{}choice, Quot.\allowbreak{}sound]} for all four declarations, statement and binder checks, and a transitive check that no original strict-state lemma is reached (51,271 and 61,231 constants visited). R1's sources and frozen manifest are in \texttt{Main/\allowbreak{}ResearchSnapshot/\allowbreak{}local/\allowbreak{}work/\allowbreak{}lean-\allowbreak{}queue/\allowbreak{}threecentre-\allowbreak{}r1/}, and its per-module logs in \texttt{Main/\allowbreak{}ResearchSnapshot/\allowbreak{}local/\allowbreak{}work/\allowbreak{}lean-\allowbreak{}queue/\allowbreak{}} (modules 1--12) and \texttt{Main/\allowbreak{}ResearchSnapshot/\allowbreak{}import-\allowbreak{}20261115/\allowbreak{}work/\allowbreak{}lean-\allowbreak{}queue/\allowbreak{}} (modules 13--27 and the root axiom check); its contract and dependency gates pass (R1-GATES). Not done: a rebuild under Lean~4.35.0.
+
+\subsection{Required-version check of the logical counting core}
+\label{sec:core435}
+The declaration
+\texttt{Mathathon.\allowbreak{}ThreeCentrePaletteCore.\allowbreak{}no\_\allowbreak{}three\_\allowbreak{}disjoint\_\allowbreak{}palettes}
+in \texttt{lean/\allowbreak{}ThreeCentrePaletteCore.lean} verifies the
+exactly-one-leftover-label specialisation of Lemma~\ref{lem:count}
+\st{Lean 4.35.0 core}. Its palettes and label groups are arbitrary membership
+predicates on a type of labels. The inclusion $J\subseteq P$, all three
+disjointness conditions, the witnesses in $Q\setminus K$ and $R\setminus K$,
+and the equivalence $i\notin J\cup K\Longleftrightarrow i=X$ are explicit
+hypotheses. The report's counting proof also covers ``at most one'' leftover
+label; the formal statement checks the exact-one case used by the five-colour
+application. It makes no claim that the palettes are complements.
+
+On 15 November 2026, \texttt{lake --no-ansi build} exited with code~0 under
+Lean~4.35.0 and printed an empty axiom list for this declaration. The project
+imports only \texttt{Init}; it neither imports nor rebuilds mathlib.
+Its configuration nevertheless pins mathlib~v4.35.0, revision
+\texttt{56a005855ea17e0b0958f73ec801ae140b0a1679}, and a complete dependency
+manifest fixes all transitive library revisions. Reproduce with
+\texttt{lake build} from \texttt{lean/}; the source, log, toolchain and
+configuration hashes are in \texttt{lean/VALIDATION.json}.
+
+This check establishes the logical implication once its hypotheses are
+available. Trace compactness, avoiding traces, the choice of a common angle,
+and unit-triangle geometry are supplied by the paper argument and cited
+inputs, not by this small formal theorem. The integrated analytic replacement,
+its moving-centre extension, CC60, and the global source development retain
+their separately labelled historical Lean~4.34.1 evidence.
 
 %======================================================================
 % SECTION 4: CC60 --- merged from the CC60 drafting pass (report-cc60.tex) after review.
@@ -776,7 +815,7 @@ them.
 
 \emph{Labels.} ``Checked in Lean~4.34.1 (archived logs)'' means an archived
 compile against Lean~4.34.1 and Mathlib \texttt{d13f23b} with exit code~0 and
-standard axioms. No item has a recorded Lean~4.35.0 build with exit status,
+standard axioms. No item in this section has a recorded Lean~4.35.0 build with exit status,
 so none is ``Lean-verified'' in the event's sense (DIAMOND, in
 Table~\ref{tab:lean-other}, is a partial exception). ``Proved (paper argument,
 independently reviewed)'' requires a referee report on file. ``Cited'' marks
@@ -1276,12 +1315,13 @@ Every figure is an illustration; none depicts a valid colouring.
 \section{Status of every main claim}
 %======================================================================
 \begin{center}\small
-\begin{tabularx}{\linewidth}{@{}X l X@{}}
+\begin{tabularx}{\linewidth}{@{}P{0.41\linewidth}P{0.20\linewidth}X@{}}
 \toprule
 Claim & Status & Evidence\\
 \midrule
 No proper five-colouring of the plane; $6\le\chi(\R^2)\le7$ & \st{cited} & manuscript \cite{OAI}, Thms 1.1, 1.4; seven-colour hexagon tiling\\
 Three-centre proof of Lemma 6.3 (fixed centre); moving-centre four-cycle lemma; integrated build R1 & \st{proved}, \st{Lean 4.34.1} & Section 3; three-centre validation logs; R1 manifest; R1-GATES \st{computation}\\
+Logical palette-counting implication, exact-one-label case with explicit hypotheses & \st{Lean 4.35.0 core} & Section~\ref{sec:core435}; \texttt{lean/VALIDATION.json}; empty axiom list\\
 CC60 & \st{Lean 4.34.1} & Section 4; cone packet\\
 CC60 cannot be widened above $60^\circ$ for arbitrary finite palettes (SHARPNESS-20; 20 colours) & \st{proved} & Section 4; sharpness referee report\\
 Lean simplification of the supplied proof, 867 lines shorter (ENC-R4, R1, S1, S2) & \st{Lean 4.34.1} & Section 5; results ledger\\
@@ -1317,7 +1357,10 @@ The archived records identify these tool roles.
 Checking was layered.
 \begin{itemize}
 \item Every lesson had an independent referee pass by a separate model instance that had not written it. The referee read the primary sources (manuscript text and Lean files).
-\item Every Lean claim rests on archived compiler logs and axiom audits; source hashes match the recorded hashes.
+\item Historical Lean claims rest on archived compiler logs and axiom audits;
+source hashes match the recorded hashes. The separately isolated counting core
+has a new Lean~4.35.0 build and empty-axiom audit, with its limited scope stated
+in Section~\ref{sec:core435}.
 \item Each figure for Lessons~3--6 was checked by script against the exact region, distances or structure it depicts; the scripts and their outputs are archived in \texttt{HadwigerNelson/\allowbreak{}Exposition/\allowbreak{}Figures/\allowbreak{}checks/\allowbreak{}}.
 \end{itemize}
 The team must be able to explain every claim; the reader's question-and-answer blocks are written for that purpose.
@@ -1329,7 +1372,7 @@ The team must be able to explain every claim; the reader's question-and-answer b
 \item The five-colour theorem, its proof and its Lean development are the supplied manuscript's \cite{OAI} and are not ours.
 \item The straddle region and the interface mechanism are the manuscript's. The manuscript credits the connected-interface idea to Sokolov and Voronov \cite{SokolovVoronov} and related one-sided strip arguments to \cite{SokolovVoronov,Voronov}.
 \item The Moser spindle is from \cite{MoserMoser}. The seven-colour hexagon tiling is classical; see \cite{Soifer} for history.
-\item Our contributions are the items in Sections~3--6 marked \st{proved}, \st{Lean 4.34.1} or \st{computation}, and the exposition.
+\item Our contributions are the items in Sections~3--6 marked \st{proved}, \st{Lean 4.34.1} or \st{computation}, and the exposition; the separately labelled Lean~4.35.0 logical core is documented in Section~\ref{sec:core435}.
 \end{itemize}
 
 %======================================================================
@@ -1338,7 +1381,10 @@ The team must be able to explain every claim; the reader's question-and-answer b
 \begin{itemize}
 \item \textbf{There is no global chromatic result here.} We neither exclude six colours nor construct a six-colouring.
 \item CC60 forbids a kind of local configuration at a common centre. Nothing shows that a hypothetical six-colouring must produce it.
-\item No Lean file of ours has yet been built under the event's Lean~4.35.0 environment; a bounded port is being attempted, and nothing beyond Lean~4.34.1 is claimed.
+\item Only the isolated logical counting core has a recorded Lean~4.35.0 build
+in this submission. Its hypotheses are explicit; it does not certify their
+analytic or geometric production. Mathlib~v4.35.0 is pinned but unused by that
+core theorem. No full analytic or global migration is claimed.
 \item The three-centre replacement is integrated only in the team's local build R1 (Lean~4.34.1), whose contract and dependency gates pass; it has not been rebuilt under Lean~4.35.0.
 \item The exposition's referee passes are bounded checks of the explanation, not an independent verification of the supplied proof.
 \end{itemize}
