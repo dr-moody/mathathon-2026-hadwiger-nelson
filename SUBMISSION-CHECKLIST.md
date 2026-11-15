@@ -12,16 +12,16 @@ Verified against official rules revision `4d6098d263275ff1cb0308908a693e776c116f
 | AI tools and how outputs were checked disclosed | Existing report includes the documented tool roles and checks |
 | Sources and assistance credited | Existing references retained; upstream Apache license included |
 | Key figures explained in text | Existing report contains figure explanations; new deck must be matched against report |
-| Slides exported as PDF | Pending deck handoff |
-| Every slide result covered in report | Prepared teaching content audited; see DECK-COVERAGE.md. Final PDF and new cone slides still to be checked |
-| Presentation at most 20 minutes; Q&A up to 10 minutes | Teaching deck may include reference slides; presenter should select main route |
+| Slides exported as PDF | PASS: `slides.pdf`, 49 pages at 16:9, numerically ordered from reviewed native renders, Jarom Moody metadata; selected proof/cone pages rendered and checked |
+| Every slide result covered in report | PASS: final 49-slide content and notes audited against report; see DECK-COVERAGE.md |
+| Presentation at most 20 minutes; Q&A up to 10 minutes | A suggested 20-minute route is included in speaker-notes.txt; the remaining teaching/reference slides are for study and questions |
 | Every repository link has a full source revision in title block | Source revision `23357553beb0d4998bebb4342157ea4f05bd1792` printed in title block; final packaging revision reported separately (see README convention) |
 | Repositories accessible to organizers at deadline | PENDING: repository is private; no organizer access has been established |
 | Historical Lean status accurately limited to 4.34.1 | Explicit throughout report and README |
-| Optional project on Lean/mathlib v4.35.0, fixed other dependencies | PASS for `lean/` logical core: Lean4.35.0, mathlib v4.35.0 pinned but unused, fixed transitive manifest |
-| Claimed optional Lean results build with permitted axioms and unchanged official statement where applicable | PASS for one counting-core declaration only: build exit0, empty axioms, explicit hypotheses. No claim of formalizing the official global theorem. Analytic migration pending. |
+| Optional project on Lean/mathlib v4.35.0, fixed other dependencies | PASS for `lean/` logical core: Lean 4.35.0, mathlib v4.35.0 pinned but unused, fixed transitive manifest |
+| Claimed optional Lean results build with permitted axioms and unchanged official statement where applicable | PASS for one counting-core declaration only: build exit 0, empty axioms, explicit hypotheses. No claim of formalizing the official global theorem. Analytic migration pending. |
 | Lean declaration/claim differences named | Tables in report; §3.8 distinguishes exact-one-label predicate statement from paper's at-most-one generality and explains analytic hypotheses |
-| Full final submission commit recorded | Pending final artifact commit and remote verification |
+| Full final submission commit recorded | Final artifact commit is supplied with the handoff; PACKAGE-MANIFEST.json records artifact hashes. Use the full containing commit returned by `git rev-parse HEAD`. |
 | Submitted on platform before noon Pacific | NOT DONE; repository preparation is not submission |
 
 Historical source and evidence hashes were recomputed during packaging. All 217 distinct ledger-referenced artifacts were available and matched their recorded hashes. This is a provenance check, not a fresh Lean build or independent mathematical verification.

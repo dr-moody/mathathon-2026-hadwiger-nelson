@@ -1,0 +1,717 @@
+PRESENTATION NOTES
+Jarom Moody
+
+The five-colour proof, three-centre separation, and the cone lemma
+49-slide teaching deck; full study notes follow.
+
+SUGGESTED 20-MINUTE ROUTE
+0:00-0:45   Slides 1, 3: scope and overall supplied proof.
+0:45-3:00   Slides 4, 5, 8, 9, 11: measurable, weak, transfer and density.
+3:00-4:15   Slides 12, 13 (briefly 10): straddling and unit contact.
+4:15-7:00   Slides 22, 23, 25: angular records, traces and palettes.
+7:00-11:00  Slides 27-31: common direction, states and avoiding traces.
+11:00-16:00 Slides 32-34, 36-38: triangle, good angle, force 5 twice.
+16:00-17:00 Slides 39, 40: comparison and role in the supplied proof.
+17:00-19:00 Slides 41, 42: cone statement and six-label exclusion.
+19:00-20:00 Slides 43, 44: AI methodology and verification boundaries.
+
+Read the other slides as preparation or use them for questions.
+Slides 46-49 reproduce the supplied original Lemma 6.3 statement and
+entire proof. The timing is a rehearsal target, not a claim that all
+the study notes below fit into twenty minutes. For a slower audience,
+use the initial definitions and supplied proof overview as a pre-read.
+
+SOURCE AND VALIDATION CONVENTION
+The slide status labels distinguish definitions, hypotheses, supplied
+inputs and deductions. The inherited global theorem is not a new team
+result. The submission report and Lean manifest state exact validation
+scope and versions. The small Lean 4.35 project checks the finite
+palette-counting theorem with explicit hypotheses; the complete
+historical analytic project uses Lean 4.34.1.
+
+Primary reading: the source-linked exposition and supplied manuscript
+in the submission repository; report Appendix A gives the original
+Separation Lemma proof. See DECK-COVERAGE.md for report correspondence.
+
+
+============================================================================
+SLIDE 1: Understanding the proof and the three-centre argument
+
+Say: I will explain the structure of the supplied five-colour
+impossibility argument, then focus on two local team contributions:
+the three-centre replacement for separation, and the closed 60-degree
+cone obstruction. The inherited global bound is not our new theorem.
+I will distinguish results we use from deductions we walk through.
+The reference slides are available for a slower reading or questions.
+
+============================================================================
+SLIDE 2: How to read this deck
+Status: READING GUIDE
+Uses: the status labels below
+Source: Reading guide
+
+Say: I want the audience to be able to tell what we have defined, what we have
+assumed, and what we have actually proved. The analytic transfer is accepted
+without proof. Other omitted supplied lemmas are explicitly labeled. The main
+contribution we examine is a replacement proof of a separation result, not a
+new global bound. The deck is a paced study resource. The technical reference
+slides can be skipped in a 20-minute presentation.
+
+============================================================================
+SLIDE 3: The overall proof
+Status: SUPPLIED PROOF: OVERVIEW
+Uses: Theorems 1.3 and 1.4; Proposition 7.1
+Source: Manuscript §§1–8; Walkthrough §32
+
+Say: The first arrow is the deep analytic transfer theorem. The second stage
+constructs actual connected sets; it does not assume neat coloured boundaries.
+The third stage handles three possible cycle lengths. The supplied result
+gives a lower bound of six. A classical seven-colouring supplies the upper
+bound. The team’s work discussed here simplifies an intermediate proof and
+does not decide six versus seven.
+
+============================================================================
+SLIDE 4: Measurable colour classes
+Status: DEFINITION: ORDINARY AREA
+Uses: the usual area measure
+Source: Walkthrough §5
+
+Say: Here A is a bounded part of one colour class. Measurable means that it
+can be squeezed between a compact inner approximation and an open outer
+approximation with arbitrarily small area gap. For unbounded classes, apply
+this inside every bounded square. Every set has an outer area; matching inner
+approximation is essential. The epsilon controls area error, not the radius of
+a uniform neighbourhood. These are area statements, not smoothness
+assumptions.
+
+============================================================================
+SLIDE 5: Weakness is a probability-zero condition
+Status: DEFINITION: WEAK COLOURING
+Uses: measurable colour classes; position and direction sampling
+Source: Definition 1.2; Walkthrough §§4–6
+
+Say: A proper colouring excludes every matching unit pair. Weakness allows
+exceptional matching pairs, provided they occupy zero measure in this precise
+experiment. We cannot choose a uniform point from the infinite plane, so we
+use bounded windows. We must build unit distance into the sampling; two
+independent random plane points would almost never be a unit apart regardless
+of colouring.
+
+============================================================================
+SLIDE 6: The sampling experiment
+Status: ILLUSTRATION: POSITION AND DIRECTION
+Uses: the weak-colouring definition
+Source: Walkthrough §4
+
+Say: First choose the pivot in a bounded disk. Then rotate a ruler of length
+one in a random direction. The endpoint is allowed outside the disk. The
+experiment always tests exact unit distance. The figure illustrates the
+definition rather than a valid five-colouring.
+
+============================================================================
+SLIDE 7: A zero-probability exception can exist
+Status: ILLUSTRATION: WEAK VERSUS PROPER
+Uses: a single point has zero planar area
+Source: Walkthrough §5
+
+Say: Use a known seven-colouring for this illustration. The point is to
+distinguish zero probability from impossibility. We are not constructing a
+five-colouring. Changing a plane-null set preserves the weak condition, by
+integrating the affected position-direction pairs. No part of the later proof
+may silently assume that arbitrary exceptional points obey the proper rule.
+
+============================================================================
+SLIDE 8: The measurable replacement
+Status: ACCEPTED INPUT: USED WITHOUT PROOF
+Uses: supplied analytic transfer theorem
+Source: Theorem 1.3, forward direction; Proposition 4.2
+
+Say: This is the major analytic theorem we explicitly accepted in our
+walkthrough. It does not assert that the original colouring is measurable. It
+constructs a possibly different colouring. The proof uses invariant
+randomization, spectral methods and a rigidity theorem. We will not reproduce
+that proof. From this point the weak and measurable hypotheses stay in force.
+
+============================================================================
+SLIDE 9: Density one
+Status: DEFINITION: ASSUME A WEAK MEASURABLE FIVE-COLOURING
+Uses: area proportions
+Source: Walkthrough §9
+
+Say: The radius shrinks while the centre stays fixed. This does not require a
+solid red disk around x. The fraction of the other colours tends to zero. A
+density-one point of a class need not literally carry that class’s label if
+the representative differs on a null set. The argument uses the density
+property, not an arbitrary label at one exceptional point.
+
+============================================================================
+SLIDE 10: Density one gives an exact restriction
+Status: SUPPLIED LEMMA 4.3: PROOF IDEA
+Uses: weakness; density one; perturbations of position and direction
+Source: Walkthrough §§10–14
+
+Say: Temporarily suppose two red density-one points are a unit apart. Move the
+ruler’s start slightly and rotate it slightly without changing its length.
+Density makes the probabilities of missing red at the two ends sufficiently
+small. A positive share of this position-and-direction family must have two
+red endpoints, contradicting weakness. Moving only in one fixed direction is
+not enough for the original product-measure contradiction; the proof includes
+a positive arc of directions.
+
+============================================================================
+SLIDE 11: Almost every coloured point has density one
+Status: CLASSICAL RESULT: STATEMENT USED HERE
+Uses: the classical density theorem
+Source: Walkthrough §§9, 18
+
+Say: The density theorem connects our exact restriction on density-one points
+to area statements. It does not say every red point is a density-one point. If
+a region contains none of the red density-one points, its red points belong to
+the exceptional null set. That is why the red area there is zero. This
+classical theorem is a separate supplied mathematical input, not a team
+contribution.
+
+============================================================================
+SLIDE 12: A connected set creates a straddle region
+Status: ILLUSTRATION: A RED DENSITY-ONE SEGMENT
+Uses: the definition of straddling
+Source: Walkthrough §§15–18
+
+Say: The region looks like an uneven racetrack for a short segment. It is
+separated from the segment itself. The pink shading marks the straddle region,
+not a red colour class. We assume every point of K is density one in red for
+this teaching model. Merely colouring a zero-area segment red would not
+suffice. We have not yet proved that such a segment exists in the hypothetical
+colouring.
+
+============================================================================
+SLIDE 13: Connectedness forces an exact contact
+Status: DEDUCTION: CONTINUITY
+Uses: connectedness; the intermediate value property of distance
+Source: Walkthrough §17
+
+Say: Fix z and let q range over K. The map q to distance(z,q) is continuous.
+The continuous image of a connected set is an interval, so it contains one
+whenever it contains a number below one and a number above one. For a general
+connected set this does not require a path or a tangent. Combining the unit
+contact with the density lemma excludes red density one at z. The density
+theorem then excludes red area in the whole straddle region.
+
+============================================================================
+SLIDE 14: An interface excludes two colours
+Status: ILLUSTRATION: TWO OPEN COLOURED SIDES
+Uses: the density lemma; the density theorem
+Source: Walkthrough §20
+
+Say: K is now the boundary between two open patches, rather than a segment
+consisting of red density-one points. A unit circle crossing the segment
+enters both sides and supplies density-one points of both colours at unit
+distance from z. Both colours consequently have zero area in the straddle
+region. This is a clean model. Connectedness alone does not provide two-colour
+exclusion, and the actual proof does not assume smooth boundaries.
+
+============================================================================
+SLIDE 15: Actual interfaces and a cycle of labels
+Status: SUPPLIED RESULT: PROPOSITION 7.1
+Uses: the analytic and topological interface construction
+Source: Walkthrough §21; manuscript §7
+
+Say: This is an existence theorem whose conclusion we are using at overview
+level. It constructs x and the sets together, not at an arbitrary chosen
+centre. Each set reaches a fixed circle around x and is not a singleton. The
+cycle belongs to the labels; it is not necessarily a polygon drawn by the
+physical sets. The supplied proof constructs both the sets and their exclusion
+properties.
+
+============================================================================
+SLIDE 16: Directions near the common centre
+Status: ILLUSTRATION: AN EASTWARD INTERFACE
+Uses: straddling; a direction in which interface points approach x
+Source: Walkthrough §§22–23
+
+Say: Choose points of K closer and closer to x. On an eastward segment,
+examples are x+(0.1,0), x+(0.01,0), and so on. Other connected sets through x
+may have points approaching from other directions. The actual theorem selects
+a limiting direction from a sequence, not a tangent or a straight ray. The
+pictured segment gives outer exclusions on its facing side and inner
+exclusions on the opposite side. Actual strip widths are local and need not be
+uniform over an entire arc.
+
+============================================================================
+SLIDE 17: The same shift preserves unit distance
+Status: DEDUCTION: DISK-AVERAGE INEQUALITY
+Uses: the density theorem; the density-point lemma
+Source: Lemma 7.2; Walkthrough discussion
+
+Say: rε(p) is the red area fraction in the radius-ε disk centred at p. The two
+samples use the same h, not independent shifts. The radius bound makes each
+endpoint uniform in its own disk; distance preservation itself holds for any
+h. The density theorem removes a null set of shifts for each endpoint. The
+density-point lemma then forbids two red endpoints for almost every shift. The
+two event probabilities are exactly the two area fractions, so they sum to at
+most one. This is not an unsupported application of the original weak
+condition at one fixed direction.
+
+============================================================================
+SLIDE 18: A map into the label graph
+Status: SUPPLIED CONSTRUCTION: OVERVIEW
+Uses: continuous disk averages; thresholding; Lemma 7.4
+Source: Manuscript §§7.1–7.2
+
+Say: We do not lay K5 onto the physical plane or assert five unit-separated
+points. The graph is an abstract space of labels. The proof subtracts a small
+threshold, clips at zero and renormalizes the proportions. Earlier transition
+analysis permits removal of small disks so that at most two coordinates remain
+positive outside them. This substantive fact makes the map graph-valued.
+Following a physical path moves a marker along the graph. Connected inverse-
+image pieces and limits later produce actual interfaces.
+
+============================================================================
+SLIDE 19: The three possible cycle cases
+Status: SUPPLIED PROOF: CASE OVERVIEW
+Uses: Proposition 7.1; palette and strip lemmas; case-specific arguments
+Source: Propositions 8.2, 8.5 and 8.10
+
+Say: We are summarizing the branch arguments, not proving them on this slide.
+The final five-cycle contradiction is a six-step walk on five possible palette
+pairs. The four-cycle contradiction uses strict separation and further
+geometric lemmas to obtain a parity property that is stable under small
+rotations but reversed by a 60-degree shift. The three-cycle case produces a
+particular three-colour region and a certified unit-distance seven-vertex
+graph placement requiring four colours. The placement and null-set avoidance
+are essential; an arbitrary open region need not contain that graph.
+
+============================================================================
+SLIDE 20: How the overall contradiction closes
+Status: SUPPLIED PROOF: CONCLUSIONS
+Uses: the three case exclusions; the accepted transfer theorem
+Source: Theorems 1.1, 1.3 and 1.4
+
+Say: The first implication of the transfer theorem was the only analytic
+bridge we explicitly accepted without proof at the start. If a proper five-
+colouring existed, it would give a weak measurable one. We have now outlined
+why the latter cannot exist. The following slides zoom into the team’s
+replacement of one intermediate separation argument.
+
+============================================================================
+SLIDE 21: The separation result and its replacement
+Status: CONTRIBUTION: SAME SEPARATION CONCLUSION
+Uses: supplied Lemma 6.3 and the team’s replacement
+Source: Walkthrough §§30–31
+
+Say: These are not two successive stages that each construct interfaces. The
+replacement supplies the same intermediate restriction needed downstream. It
+supports interface construction and cycle analysis with other inputs. The
+final four-cycle case directly uses the stability provided by separation.
+Earlier five-cycle centre analysis also uses it; the final five-cycle
+contradiction has its own finite argument. We will now define every object
+used by the replacement.
+
+============================================================================
+SLIDE 22: Colour records on a circle
+Status: DEFINITION: ANGULAR SAMPLING
+Uses: measurable, typical circle samples
+Source: Definition 5.1 and preceding setup
+
+Say: A disk has planar area. Here we sample a circle using angular length. The
+proof chooses circles for which the angular functions are measurable and
+almost every sampled point is density one in its actual colour. Almost every
+radius about a fixed centre qualifies by polar-coordinate integration of the
+exceptional plane-null set. The five indicator functions are ordinary colour
+records, before taking any limits.
+
+============================================================================
+SLIDE 23: A trace is a limiting angular record
+Status: DEFINITION: TRACE AT x
+Uses: compactness for bounded angular records
+Source: Definition 5.1; Walkthrough §26
+
+Say: The sequence of circles produces the trace; the trace is the limiting
+record, not the sequence itself. The convergence concerns averages on fixed
+arcs, not necessarily the colour at each individual angle. A toy record of
+finer alternating red and blue arcs can converge to weights one half and one
+half. That illustrates averaging, not a proposed valid colouring. Different
+subsequences can yield different traces.
+
+============================================================================
+SLIDE 24: Why a convergent subsequence exists
+Status: SUPPLIED COMPACTNESS INPUT
+Uses: boundedness; diagonal selection; weak compactness
+Source: Definition 5.1 setup; Walkthrough §26
+
+Say: Measurability alone does not imply compactness. For one arc and one
+colour, a subsequence of proportions converges in [0,1]. A diagonal argument
+handles a countable family of rational-endpoint arcs and the five labels. The
+uniform bound extends convergence to arbitrary arcs. Standard weak compactness
+represents the limiting record by the functions g_i. This is the functional
+compactness used in the supplied trace setup.
+
+============================================================================
+SLIDE 25: A palette keeps the possible labels
+Status: DEFINITION: PALETTE Pₓ(t)
+Uses: traces; positive limiting weights
+Source: Definition 5.1; Walkthrough §26
+
+Say: A trace keeps weights. A palette keeps the names of labels that can
+contribute positive weight across traces. The table is a schematic definition
+example. The palette is {1,2}, not the vector (0.7,0.3). It is not the literal
+colour of x or of one point x+e(t). Positive limiting angular weight is the
+correct phrase; a single point does not have positive planar area.
+
+============================================================================
+SLIDE 26: Palettes and exceptional angles
+Status: DEFINITION: ESSENTIAL UNION
+Uses: the essential-union convention for traces
+Source: Definition 5.1; Walkthrough §26
+
+Say: We cannot naively take pointwise unions of arbitrary representatives of
+uncountably many traces. E_i covers the positive-coordinate set of each trace
+modulo null sets, and is minimal with that property. A countable generating
+family can represent this essential union. The exceptional angular set may
+depend on the trace. We will use only finitely many specified traces in the
+three-centre proof, so their exceptions can be removed together.
+
+============================================================================
+SLIDE 27: The same compass direction at two centres
+Status: SUPPLIED RESULT: PALETTE DISJOINTNESS
+Uses: supplied palette-transfer theorem
+Source: Lemma 5.2 and Remark 5.3; Walkthrough §27
+
+Say: The same vector added to x and y preserves their distance one. For
+example, centres (0,0) and (1,0) give northward points (0,1) and (1,1). They
+are still one unit apart. They are not pointing toward each other. The
+geometry motivates the theorem, but passing to whole limiting palettes
+requires the supplied analytic transport result. We use its statement here
+rather than claiming to have proved it with the picture.
+
+============================================================================
+SLIDE 28: The first state is a hypothesis
+Status: HYPOTHESIS: SUPPLIED SEPARATION LEMMA
+Uses: the hypotheses of Lemma 6.3
+Source: Walkthrough §§28, 30
+
+Say: This positive-measure state is an assumption of the separation lemma. We
+are not proving that every centre has such a state. It is A, the set of
+angles, that has positive measure. The palette is a finite set of labels.
+Positive measure will allow us to choose a common angle after discarding
+finitely many null exceptions.
+
+============================================================================
+SLIDE 29: The second state and its support
+Status: HYPOTHESIS AND DEFINITION
+Uses: the second hypothesis of Lemma 6.3
+Source: Walkthrough §28
+
+Say: Earlier K denoted a geometric interface. In this part J and K denote
+groups of labels; physical interfaces can be written K_j. Support is stronger
+than mere closure. A countable dense angular set has full closure but zero
+measure and empty essential support. Positive mass in every neighbourhood
+ensures that removing a null exceptional set still leaves good nearby
+directions.
+
+============================================================================
+SLIDE 30: A supplied fact at a shifted centre
+Status: SUPPLIED ANALYTIC RESULT: STATEMENT USED HERE
+Uses: supplied state-support avoiding-trace result
+Source: Walkthrough §28; supplied BoundaryTrace declarations
+
+Say: This is an inherited analytic input, not a new theorem proved by the
+counting step. The supplied palette-exclusion result supplies good nearby
+circles avoiding K. Support lets us choose directions approaching b outside
+the null sets. Taking a trace limit at y preserves the zero coordinates. We
+are using this construction as a supplied result here. The whole palette at y
+need not avoid K because other traces may contribute labels in K.
+
+============================================================================
+SLIDE 31: One avoiding trace supplies an outside label
+Status: DEDUCTION: FROM TRACE TO PALETTE
+Uses: trace weights sum to one; positive coordinates enter the palette
+Source: Walkthrough §§26, 28
+
+Say: This is the condition Q is not a subset of K. It means at least one
+palette member lies outside K. It does not say that Q and K are disjoint. The
+palette could also contain 3 or 4 from another trace. Q={5} is allowed and
+causes no contradiction on its own. The later contradiction requires a second
+unit-separated centre whose palette also contains 5.
+
+============================================================================
+SLIDE 32: The forbidden pair creates a unit triangle
+Status: HYPOTHESIS FOR CONTRADICTION
+Uses: two support directions b,d assumed 60° apart
+Source: Walkthrough §30
+
+Say: This is the assumption we will refute. The lemma does not assert that
+these two support directions exist. Put y=x+e(b) and z=x+e(d). Both are one
+unit from x and the 60-degree chord y-z has length one. The colours used to
+draw the centre markers do not assert their actual colouring. The sets P,Q,R
+later belong to these centres at one common sampling angle, not to the three
+edge directions.
+
+============================================================================
+SLIDE 33: Apply the palette theorem to each side
+Status: SUPPLIED RESULT APPLIED THREE TIMES
+Uses: palette disjointness at unit-separated centres
+Source: Walkthrough §§27, 30
+
+Say: This is where the disjointness condition comes from. We do not assume
+that palette sets at arbitrary unrelated centres are disjoint. Each result may
+have its own exceptional angular set. With the centres fixed, there are only
+three such sets to remove. A finite union of null sets remains null. We are
+not intersecting conditions for uncountably many moving centres.
+
+============================================================================
+SLIDE 34: Choose one angle where all inputs hold
+Status: DEDUCTION: POSITIVE MEASURE BEATS NULL EXCEPTIONS
+Uses: the positive-measure state A; finitely many almost-everywhere results
+Source: Walkthrough §30
+
+Say: The order matters. First fix the hypothetical support pair b,d, hence the
+three centres and the two avoiding traces. Only then collect their finite set
+of almost-everywhere conclusions. Finally choose t in A. Because A has
+positive measure, the null exceptions cannot exhaust it. This positive measure
+is used to select an angle; it is not itself a direct violation of weakness.
+Explicitly include the null set on which the state condition {1,2} subset
+P_x(t) fails inside A.
+
+============================================================================
+SLIDE 35: The three palettes at the chosen angle
+Status: DEDUCTION: THE FINITE DATA
+Uses: the angle selected on the preceding slide
+Source: Walkthrough §§29–30
+
+Say: Disjoint sets need not be complements. For example, P={1,2}, Q={5} are
+disjoint even though neither contains 3 or 4. Labels are not used up globally;
+a label is forbidden in another palette here only because the relevant
+disjointness theorem says so. The three sets can come from different
+locations. The geometry supplied their relationships.
+
+============================================================================
+SLIDE 36: Label 5 is forced into Q
+Status: DEDUCTION: FIRST FORCED LABEL
+Uses: Q has an outside label; P contains {1,2}; P ∩ Q = ∅
+Source: Walkthrough §29
+
+Say: We are not assuming Q is the complement of P. Nor are we asserting Q={5}.
+It may also have 3 or 4. We selected one member outside {3,4}, and
+disjointness from P eliminates 1 and 2. That selected member must be 5. Stop
+here if someone wants to check the counting.
+
+============================================================================
+SLIDE 37: The same reasoning forces 5 into R
+Status: DEDUCTION: CONTRADICTION
+Uses: the same counting step applied to R; Q ∩ R = ∅
+Source: Walkthrough §§29–30
+
+Say: Yes, another set can contain 5 in general. The contradiction comes only
+because our geometry also requires Q and R to be disjoint. Each set
+individually could be {5}; two such palettes at these unit-separated centres
+and this common good angle are forbidden. We have produced an impossible
+combination of palettes, not a palette of positive measure.
+
+============================================================================
+SLIDE 38: The separation conclusion
+Status: TEAM REPLACEMENT PROOF: CONCLUSION
+Uses: the unit triangle; the supplied palette and trace inputs; finite counting
+Source: Replacement of the separation part of Lemma 6.3
+
+Say: This proves the fixed-centre separation conclusion under the stated A,J
+and B,K hypotheses. The support on the angular circle is compact. Its
+disjointness from its 60-degree rotation therefore gives positive distance
+between those compact sets. The bare no-unit-chord formal statement for
+arbitrary real-angle sets should not be confused with compactness of an
+unbounded real-line support. The manuscript setting gives the strict margin.
+
+============================================================================
+SLIDE 39: What the replacement simplifies
+Status: COMPARISON: ORIGINAL AND THREE-CENTRE PROOFS
+Uses: the original Lemma 6.3; the fixed and moving replacements
+Source: Walkthrough §§30–31; ThreeCentres guide
+
+Say: The original proof is the supplied argument, not something this deck
+alleges to refute. We compare complexity and dependencies. The replacement
+reuses substantial analytic results already available in the development, so
+it does not eliminate all analysis. The first density assertion of Lemma 6.3
+remains in use. A moving-centre extension uses closedness of the set of
+centres admitting an avoiding trace to preserve the needed downstream
+conclusions.
+
+============================================================================
+SLIDE 40: The contribution’s role in the full proof
+Status: SCOPE: SAME THEOREM, SIMPLER INTERMEDIATE ARGUMENT
+Uses: the supplied dependency chain; replacement separation proof
+Source: Walkthrough §31; manuscript §§6–8
+
+Say: I earlier described the dependency too broadly in the conversation.
+Separation is an ingredient, not an interface existence theorem. Some five-
+cycle uses occur earlier while controlling special centres. The final five-
+cycle exclusion uses a separate finite argument. The final four-cycle argument
+directly combines separation with additional geometry to force a parity
+contradiction. The whole proof still relies on the supplied transfer, palette
+theory, topology and case analysis.
+
+============================================================================
+SLIDE 41: The closed 60° cone theorem
+Status: TEAM RESULT: CC60 — STATEMENT USED HERE
+Uses: actual common-centre sets; approach directions; straddle exclusions
+Source: Walkthrough §24; ConeObstruction.lean:150; results ledger CC60
+
+Say: This is a team theorem about one local geometric configuration, separate
+from the three-centre replacement. We allow any finite number k of labels. For
+every set C_i, there must be actual points q_i,n in C_i other than x with
+q_i,n tending to x, and the normalized directions (q_i,n-x)/|q_i,n-x| tending
+to v_i. The v_i are oriented unit vectors: reversing a direction is not
+permitted just to make the cone narrower. The sets can approach x from other
+directions too; no tangent or straight ray is assumed. A common cone of width
+60 degrees means that some angle phi has representatives alpha_i in [phi-pi/6,
+phi+pi/6]. The conclusion counts labels outside the union of the exclusion
+lists; it does not claim that every permitted label actually appears. The
+generic theorem does not require the sets to be connected or compact, although
+the supplied interfaces have both properties. Its formal hypothesis is that
+the spatial essential support of each forbidden label is disjoint from the
+corresponding open straddle region. On an open region this is equivalent to
+that label having zero area there. Neither a list of arrows nor arbitrary
+label pairs supplies these hypotheses. The theorem includes equality at 60
+degrees. We are stating its result and role here, not presenting its complete
+proof. Source:
+HadwigerNelson/Main/ResearchSnapshot/local/outputs/cone/ConeObstruction.lean,
+closed60_exclusions_three_le at line 150; binary contradiction form at line
+133. Recorded Lean 4.34.1 checks and standard-only axiom audits are in the
+cone REPORT.txt / VALIDATION.json and RESULTS-LEDGER.md, CC60. No fresh build
+is claimed.
+
+============================================================================
+SLIDE 42: What the cone theorem rules out
+Status: ILLUSTRATION: AN IMPOSSIBLE LOCAL CONFIGURATION
+Uses: CC60; six labels; two exclusion sets 40° apart
+Source: Walkthrough §§23–25; cone packet and independent referee
+
+Say: For this illustration, allow six labels. The two actual sets through x
+have selected directions 40 degrees apart. One excludes labels 1 and 2 from
+its straddle region, the other excludes 3 and 4. In the overlap, only labels 5
+and 6 can remain, up to zero-area exceptions. But the approach directions fit
+inside a closed 60-degree cone, so CC60 requires at least three labels outside
+the two exclusion lists. This is a contradiction. The drawing is an impossible
+hypothetical configuration, not a valid six-colouring. Blue and green shading
+mark exclusion regions and red marks their overlap; those shadings do not
+assign actual colours to plane points. The short straight segments are a
+geometric model, with their lengths exaggerated. The proof mechanism is that
+directions within a closed 60-degree cone give common OUTER strips along an
+open 120-degree arc of the unit circle around x. The intersection is
+restricted to one fixed pair of labels if at most two survive. The team proves
+that such an outer-strip region cannot be almost everywhere two-coloured
+(OA120), and CC60 follows. Widths are locally positive but need not stay
+uniformly positive up to the open arc endpoints. The picture also displays
+inner overlap, but the CC60 proof uses the common outer side; do not mix inner
+and outer sides independently for different interfaces. Usefulness: this
+rejects candidate local arrangements once their geometric hypotheses have been
+proved, and can strengthen finite searches that faithfully encode those
+hypotheses. It does not show that every hypothetical six-colouring must
+contain this arrangement, so it does not prove a global no-six result or
+improve the supplied bound. If the two excluded pairs instead were {1,2} and
+{1,3}, the surviving labels would be {4,5,6}; CC60 alone would give no
+contradiction. Sources: ConeObstruction.lean, outer120_binary_impossible:51,
+closed60_continua_outer_strips:101, closed60_exclusions_not_binary:133; ASTRA-
+CONE-REFEREE.txt §§1–3. The existing PNG was visually checked for its labels,
+40-degree setup, six-label universe, and explicit impossible-configuration
+caption.
+
+============================================================================
+SLIDE 43: How I used AI
+Status: METHODOLOGY: JAROM MOODY
+Uses: Jarom Moody’s account of the workflow
+Source: Methodology statement supplied for this deck
+
+Say in first person: I used Codex and Claude as project managers and
+interpreters of the research stream. They continuously digested reports from
+the OpenMath OS swarm and helped formulate further prompts. I interacted with
+those managers to understand which results mattered and to troubleshoot
+practical problems, including the Lean pipeline. This description records the
+workflow I reported. It does not claim that I personally wrote or
+independently checked every mathematical or formal step.
+
+============================================================================
+SLIDE 44: Human understanding and verification
+Status: METHODOLOGY: READING AND CHECKING
+Uses: the tutoring conversation; source-linked proof records
+Source: Methodology and verification boundaries
+
+Say: My questions repeatedly caught places where the explanation had become
+too compressed. We separated a trace from the sequence producing it, a palette
+from the weights in one trace, and a hypothesis from a guaranteed existence
+statement. Formal checks are meaningful only for the exact statements,
+dependencies and toolchain actually tested. The report and submission manifest
+identify what has been validated. Human understanding remains a separate task
+from merely possessing a build log.
+
+============================================================================
+SLIDE 45: Results used in the three-centre proof
+Status: REFERENCE: DEPENDENCY LEDGER
+Uses: the supplied manuscript and replacement source
+Source: Walkthrough §§26–31; source map
+
+Say: This is the dependency checklist for a precise reading. The analytic
+transfer was accepted without proof. The palette-transfer and avoiding-trace
+facts are supplied analytic inputs whose statements we used. The A and B state
+conditions are hypotheses of the separation result. The equilateral triangle,
+finite union of null exceptions, and forced-label contradiction are the
+deductions explained in the deck. Sources: manuscript Definition5.1,
+Lemma5.2/Remark5.3, Lemma6.3; supplied BoundaryTrace and FiveSupport
+declarations; team FixedStateThreeCentres and MovingThreeCentres files.
+
+============================================================================
+SLIDE 46: Original Separation Lemma: statement
+Status: SOURCE EXCERPT: OPENAI SUPPLIED MANUSCRIPT · LEMMA 6.3
+Uses: states, essential support and the notation R = rotation by 60°
+Source: Supplied manuscript, printed p.36; report Appendix A
+
+Read the original statement without silently strengthening it. The disjoint
+groups cover every label except X. The density assertion concerns nonparallel
+density-one directions. The separation assertion requires A to have positive
+angular measure. The last paragraph is the uniform moving version; our fixed-
+centre argument alone does not yet prove that version. The report includes the
+full original statement and proof. The notation kappa denotes pi/3, and R is
+the corresponding rotation.
+
+============================================================================
+SLIDE 47: Original proof: reduce to nearby directions
+Status: SOURCE EXCERPT: OPENAI PROOF · PART 1 OF 3
+Uses: Lemma 5.2 density conclusion; density directions approximate support
+Source: Supplied manuscript, printed p.36; report Appendix A
+
+The first paragraph proves the density assertion, which our replacement
+retains. For separation, the original proof treats the uniform moving
+statement first. Suppose the separation fails along a sequence. Replace
+support points by nearby density-one directions b_n and d_n. Their difference
+tends to a unit vector. Choose an angular interval meeting A in positive
+measure while avoiding finitely many parallel directions. Ask why the interval
+can be chosen: A is positive measure, and removing finitely many directions
+cannot exhaust it.
+
+============================================================================
+SLIDE 48: Original proof: adjust to exact unit distance
+Status: SOURCE EXCERPT: OPENAI PROOF · PART 2 OF 3
+Uses: implicit function theorem; nonparallel directions; L¹ convergence
+Source: Supplied manuscript, printed p.36; continues on p.37
+
+This is the analytic step our separation proof avoids. A small adjustment
+c_n(a) enforces exact distance one. Nonparallelity ensures a nonzero
+derivative, so the implicit function theorem applies. Uniform control and
+bounded inverse derivatives support a change-of-variable estimate. The last
+sentence continues on the following slide. A useful criticism must target an
+exact estimate or hypothesis here; the mere fact that the argument is longer
+is not a mathematical objection.
+
+============================================================================
+SLIDE 49: Original proof: the final contradiction
+Status: SOURCE EXCERPT: OPENAI PROOF · PART 3 OF 3
+Uses: L¹ stability; the density assertion; density-point properness; compactness
+Source: Supplied manuscript, printed p.37; report Appendix A
+
+The L1 estimate ensures a positive-measure set of a for which both a and the
+adjusted c_n(a) lie in the desired state. Remove the null exceptions to make
+both density-one directions. The resulting two spatial points are density-one
+X points and are exactly unit separated. This contradicts the earlier density-
+point lemma. At a fixed centre, compactness converts exclusion of exactly
+unit-distance support pairs into a positive separation margin. Our alternative
+instead fixes an exact triangle of centres and forces X into two disjoint
+palettes.

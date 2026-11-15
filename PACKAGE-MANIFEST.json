@@ -1,0 +1,42 @@
+{
+  "prepared_utc": "2026-11-15T19:34:47.925110+00:00",
+  "repository": "https://github.com/dr-moody/mathathon-2026-hadwiger-nelson",
+  "supporting_source_commit": "23357553beb0d4998bebb4342157ea4f05bd1792",
+  "packaging_revision_convention": "Submit the full Git commit containing this manifest. The manifest cannot embed its own containing commit hash.",
+  "artifacts": [
+    {
+      "path": "report.tex",
+      "sha256": "1250f2503b199e9d0f8b358f978996b0cdac16a9c2e0a72f65f90eb40efc3aa4",
+      "bytes": 125621
+    },
+    {
+      "path": "report.pdf",
+      "sha256": "3cdddf8e810468b7153e76fce09534669eb9987d3d9305e1f0c41b8da33a7418",
+      "bytes": 237304,
+      "pages": 28
+    },
+    {
+      "path": "slides.pdf",
+      "sha256": "a575aefa17b630994176e20ab97d513c62a5eeedc42def3ad758c51eda4cd517",
+      "bytes": 3012195,
+      "pages": 49
+    },
+    {
+      "path": "speaker-notes.txt",
+      "sha256": "c6b07b23f72783e36cd2e86b673de02018a5708d7675a3bb7e048bb9f2bbf965",
+      "bytes": 39200
+    }
+  ],
+  "required_version_lean": {
+    "project": "lean/",
+    "declaration": "Mathathon.ThreeCentrePaletteCore.no_three_disjoint_palettes",
+    "exit_code": 0,
+    "axioms": [],
+    "scope": "The finite palette-counting contradiction, with all palette/state consequences explicit as hypotheses. Not trace existence, geometry, analytic fixed/moving separation, or the global colouring theorem.",
+    "mathlib_imported_by_theorem": false,
+    "validation": "lean/VALIDATION.json"
+  },
+  "historical_project": "historical-lean/",
+  "official_rules_commit": "4d6098d263275ff1cb0308908a693e776c116f53",
+  "not_a_submission_receipt": true
+}

@@ -9,11 +9,12 @@ This repository assembles the report, teaching slides, and supporting mathematic
 ## Reading order
 
 1. [report.pdf](report.pdf) and its self-contained source [report.tex](report.tex): the mathematical account, attribution, declaration-to-claim mappings, and limitations; 28 pages including the original separation-proof appendix.
-2. `slides.pdf`: the presentation and reference appendix. This file is being prepared separately and is not present until exported and checked.
-3. [ProofWalkthrough.md](HadwigerNelson/Exposition/ProofWalkthrough.md): the longer staged reader.
-4. [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json): byte-level provenance for the copied supporting material.
+2. [slides.pdf](slides.pdf): 49 slides, including the cone theorem and original separation-proof reference appendix. Jarom Moody is the sole human author name.
+3. [speaker-notes.txt](speaker-notes.txt): full explanations and a suggested 20-minute presentation route through the teaching deck.
+4. [ProofWalkthrough.md](HadwigerNelson/Exposition/ProofWalkthrough.md): the longer staged reader.
+5. [PACKAGE-MANIFEST.json](PACKAGE-MANIFEST.json) and [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json): hashes of the final artifacts and provenance of copied supporting material.
 
-The report is compiled and visually checked; the new slides are still being assembled. This repository has **not been submitted to the competition**. See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for the remaining concrete checks.
+The report and slides are complete and visually checked. The slide PDF preserves all 49 reviewed native slide renders in order, at 16:9; its pages are image-based. The notes and report provide searchable text. The saved live deck remains editable in the author's presentation workspace. This repository has **not been submitted to the competition**. See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for the remaining access and platform steps.
 
 ## What is inherited and what was changed
 

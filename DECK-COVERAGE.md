@@ -1,6 +1,6 @@
 # Teaching deck coverage in the report
 
-Audit of the final planned 49-slide teaching sequence, including the two cone slides and four original-proof reference slides. This maps mathematical content and speaker notes to the self-contained report. It is not a claim that the final PDF export has already been inspected.
+Audit of the final 49-slide teaching sequence, including the two cone slides and four original-proof reference slides. This maps mathematical content and speaker notes to the self-contained report. All 49 native slide renders were reviewed during authoring. The final PDF preserves those renders in numeric order; its page count, 16:9 dimensions, metadata and selected proof/cone pages were checked independently during packaging.
 
 | Slides | Content | Report location |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ Audit of the final planned 49-slide teaching sequence, including the two cone sl
 | 35–37 | Sets need not be complements; force label 5 into both other palettes | §3.3 example and counting proof |
 | 38 | No unit chord; compact-circle strict margin | §3.1; original statement and final compactness sentence in Appendix A |
 | 39–40 | What changes, what remains, moving-centre extension and downstream role | §§2.4–2.5, 3.5–3.6; Appendix A comparison |
-| 41–42 | Closed60° cone theorem and six-label example; precise local scope | §4 |
+| 41–42 | Closed 60° cone theorem and six-label example; precise local scope | §4 |
 | 43–44 | Human account of AI administration, report prompting, questions and pipeline troubleshooting | §8 |
 | 45 | Dependency ledger for the three-centre argument | §§3.1–3.4 |
 | 46–49 (reference appendix) | Original supplied Lemma 6.3 statement and proof | Appendix A, attributed transcription of supplied manuscript pp36–37 |
