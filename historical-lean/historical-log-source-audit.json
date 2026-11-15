@@ -1,0 +1,404 @@
+[
+  {
+    "log": "01-WeakColoring.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\WeakColoring.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "02-Compactness.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Compactness.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "03-CircleOperator.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\CircleOperator.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "04-InvariantMean.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\InvariantMean.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "05-Multipliers.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\Multipliers.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "06-FourierTests.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\FourierTests.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "07-PhaseCollision.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\PhaseCollision.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "08-ConditionalSelection.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\ConditionalSelection.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "09-ConditionalSpectrum.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\ConditionalSpectrum.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "10-Amenability.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Amenability.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "11-Centers.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Centers.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "12-RelativeCenters.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\RelativeCenters.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "13-Approximation.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Approximation.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "14-ConditionalLimits.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\ConditionalLimits.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "15-Kernels.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Kernels.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "16-BoundedFunctions.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\BoundedFunctions.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "17-RelativeProducts.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\RelativeProducts.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "18-Separability.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Separability.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "19-AlgebraModels.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\AlgebraModels.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "20-Functions.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Functions.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "21-Factors.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Factors.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "22-Stationary.log",
+    "source": "OAI\\MeasureTheory\\CompactFactors\\Stationary.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "23-Representations.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\Representations.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "24-Energy.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\Energy.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "25-RadialEnergy.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\RadialEnergy.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "26-SpectralMeasure.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\SpectralMeasure.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "27-Ergodicity.log",
+    "source": "OAI\\Analysis\\PlaneSpectrum\\Ergodicity.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "28-Expansion.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Expansion.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "29-BinaryDynamics.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\BinaryDynamics.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "30-CircleTransport.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\CircleTransport.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "31-Transitions.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Transitions.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "32-Palettes.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Palettes.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "33-PaletteDensity.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\PaletteDensity.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "34-PaletteTransport.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\PaletteTransport.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "35-Rigidity.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Rigidity.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "36-BinaryPalettes.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\BinaryPalettes.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "37-States.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\States.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "38-BoundaryTrace.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\BoundaryTrace.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "39-AngularBoundary.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\AngularBoundary.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "40-Exclusion.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Exclusion.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "41-AvoidingTrace.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\AvoidingTrace.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "42-FourContinuity.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\FourContinuity.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "43-FourTransport.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\FourTransport.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "44-Accumulation.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Accumulation.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "45-BorelTransfer.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\BorelTransfer.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "46-FiveSupport.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\FiveSupport.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "47-CyclicCore.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\CyclicCore.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "48-DiskAverages.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\DiskAverages.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "49-PlanarCovers.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\PlanarCovers.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "50-GraphRealization.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\GraphRealization.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "51-Interfaces.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Interfaces.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "52-Moser.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Moser.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "53-Sectors.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Sectors.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "54-ContinuumLimits.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\ContinuumLimits.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "55-DiskExtension.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\DiskExtension.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "56-GraphCuts.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\GraphCuts.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "57-HoleApproximation.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\HoleApproximation.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "58-GraphPatches.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\GraphPatches.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "59-FullApproximation.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\FullApproximation.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "60-Mesh.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Mesh.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "61-Five.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Five.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "62-Lattice.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Lattice.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "63-Seven.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Seven.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "64-Chromatic.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Chromatic.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "65-Converse.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Converse.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "66-NullSetRobust.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\NullSetRobust.lean",
+    "match": true,
+    "exit_zero": true
+  },
+  {
+    "log": "67-Transfer.log",
+    "source": "OAI\\Geometry\\PlaneColoring\\Transfer.lean",
+    "match": true,
+    "exit_zero": true
+  }
+]

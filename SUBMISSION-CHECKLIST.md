@@ -6,14 +6,14 @@ Verified against official rules revision `4d6098d263275ff1cb0308908a693e776c116f
 | --- | --- |
 | New isolated GitHub repository | Created privately under `dr-moody` |
 | Problem and track stated | Problem 33; Combinatorics, the official proposed track. Platform selection remains the human team's responsibility. |
-| One self-contained `.tex` and its compiled PDF | PASS: `report.tex` + `report.pdf`, 26 pages, compiled and visually checked |
+| One self-contained `.tex` and its compiled PDF | PASS: `report.tex` + `report.pdf`, 27 pages, compiled and visually checked |
 | Identity / affiliations / repository link only in report title block | Jarom Moody is the supplied identity; no affiliation is invented |
 | Report distinguishes inherited results, event work, evidence, and limitations | PASS: status labels, timestamp scope, historical environment, and limitations explicit |
 | AI tools and how outputs were checked disclosed | Existing report includes the documented tool roles and checks |
 | Sources and assistance credited | Existing references retained; upstream Apache license included |
 | Key figures explained in text | Existing report contains figure explanations; new deck must be matched against report |
 | Slides exported as PDF | Pending deck handoff |
-| Every slide result covered in report | Pending final deck audit; original Lemma 6.3 added to report appendix |
+| Every slide result covered in report | Prepared teaching content audited; see DECK-COVERAGE.md. Final PDF and new cone slides still to be checked |
 | Presentation at most 20 minutes; Q&A up to 10 minutes | Teaching deck may include reference slides; presenter should select main route |
 | Every repository link has a full source revision in title block | Source revision `a05c6d1d3f75a986c56956ef9cde31d549850475` printed in title block; final packaging revision reported separately (see README convention) |
 | Repositories accessible to organizers at deadline | PENDING: repository is private; no organizer access has been established |

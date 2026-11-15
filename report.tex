@@ -109,6 +109,13 @@ disk proportion is $m(C_i\cap B(x,h))/(\pi h^2)$, where $m$ denotes area.
 Density one means that this ratio tends to one as $h\to0$. It does not mean
 that any small disk must be entirely of that colour.
 
+For a bounded set $E$, the measurable-set criterion used in the slides is:
+for every $\varepsilon>0$, there are a compact $K$ and an open $U$ with
+$K\subseteq E\subseteq U$ and $m(U\setminus K)<\varepsilon$. For an unbounded
+colour class this is applied to its bounded parts. The error controls area,
+not a fixed neighbourhood radius. This is the usual regularity
+characterisation of Lebesgue measurability.
+
 A colouring $c:\R^2\to\{1,\dots,k\}$ with measurable classes is \emph{weak} if almost every unit pair has distinct colours, with respect to the measure $dx\,d\sigma(u)$ on positions $x$ and unit directions $u$. Our reader explains this with a unit ruler: place it at random in a window $B$ and turn it uniformly. A placement is \emph{bad} if both ends get the same colour. Weakness says the probability $P_B$ of a bad placement is zero in every window. A proper colouring forbids bad placements outright. A weak one forbids them only up to a null set, so changing a colouring on a null set preserves weakness. Theorem~1.3 shows that a proper $k$-colouring yields a weak measurable $k$-colouring. The proof is spectral and uses a Haar-rigidity theorem (manuscript Theorem~2.3). We summarise it but do not re-derive it.
 
 The transfer produces a weak measurable colouring; it does not assert that the
@@ -116,6 +123,13 @@ original proper colouring's classes were measurable. In the presentation this
 transfer is an accepted supplied input. The subsequent density, palette and
 interface arguments are all made under the standing hypothesis that a weak
 measurable five-colouring exists, for contradiction.
+
+For an illustration of weakness, start with a measurable proper seven-colouring
+and recolour one point to match a point a unit away. A monochromatic unit pair
+now exists, but every newly bad ruler has the changed point as an endpoint.
+The position--direction experiment hits that point with probability zero at
+either endpoint, so weakness survives. This illustrates the distinction; it
+does not construct a five-colouring.
 
 \paragraph{How the transfer works.} \st{cited} Restrict the assumed proper colouring to the countable algebraic plane, and average its translates and algebraic rotations to obtain a symmetry-invariant probability law on labelings; this gives symmetry but not yet measurability. Translations act on square-integrable random variables with a spectral description by characters. Manuscript Theorem~2.3 shows that a rotation-invariant law concentrated away from the ordinary characters $z\mapsto\exp(i\xi\cdot z)$ must be Haar probability, so the irregular part of the spectrum has zero correlation under every nonzero algebraic translation. Projecting each colour indicator onto the ordinary-character part is a conditional expectation: it keeps the coordinates nonnegative with sum one, and keeps the zero correlations at unit translations. The resulting fields extend continuously to the real plane. Choosing the least label with positive field value, and a fixed label on the remaining null set, gives a measurable colouring in which two equal labels at unit distance would force a positive correlation; so it is weak (manuscript Sections~2--4, Proposition~4.2).
 
@@ -136,12 +150,25 @@ If $K$ is connected, every $z\in\Delta(K)$ is at distance exactly $1$ from some 
 
 \subsection{Palettes, transitions and states (manuscript Sections 5--6)}
 The circle records are functions of angle, rather than one average for an entire
-circle. A trace is a limiting angular record extracted along a subsequence of
-typical radii tending to one. Weak-$*$ convergence records the limiting colour
+circle. On a circle with centre $c$ and radius $r$, record
+$f_i(t)=\mathbf{1}_{C_i}(c+r(\cos t,\sin t))$. Each $f_i$ takes values in
+$\{0,1\}$ and the coordinates sum to one. On typical radii these functions
+are measurable and almost every sampled point is a density-one point of its
+actual class; polar-coordinate integration of the exceptional planar null set
+gives this for almost every radius about a fixed centre.
+A trace at $x$ is a limiting angular record extracted along a subsequence of
+typical circles with centres $c_n\to x$ and radii $r_n\to1$. Weak-$*$ convergence records the limiting colour
 averages on arcs (and against integrable test functions); it need not give
 pointwise convergence at every direction. Subsequence extraction comes from
 compactness of the bounded function space used in the supplied construction,
 not from measurability alone. Different subsequences may give different traces.
+One can first choose subsequences for the finitely many colours and countably
+many rational-endpoint arcs by a diagonal argument. The uniform bounds extend
+the convergence to other arcs; weak compactness represents the limiting
+functionals by functions $g_i\ge0$ with $\sum_i g_i=1$ almost everywhere.
+Thus $\int_I f_{i,n}\to\int_I g_i$ for each fixed angular interval $I$.
+Finer alternating red and blue arcs can, as a schematic example, have limiting
+weights $1/2,1/2$; a trace is the limiting record, not the sequence producing it.
 
 The palette is the essential union of the labels appearing with positive trace
 weight at a direction, over the admissible traces. It is a set of labels, not a
@@ -151,6 +178,12 @@ forming the measurable set-valued record. A trace whose entries sum to one and
 vanish on a label set $K$ has some positive entry outside $K$. Consequently the
 palette contains some label outside $K$; other traces may still contribute
 labels from $K$ to the same palette.
+More precisely, for each label $i$ take the least measurable angular set $E_i$,
+modulo null sets, which contains $\{t:g_i(t)>0\}$ modulo a null set for every
+trace $g$. Then $P_x(t)=\{i:t\in E_i\}$. A countable generating trace family
+represents this essential union. The exceptional set may depend on the trace;
+the three-centre argument specifies only finitely many traces before removing
+their exceptional sets.
 
 \begin{itemize}
 \item Traces and palettes. At a centre $x$, weak-$*$ limits of colour records on typical circles of radius tending to $1$ are \emph{traces}; at almost every direction a trace is a probability vector over labels. The \emph{palette} $P_x(e)$ is the essential union of the labels that traces make positive at direction $e$ (Definition~5.1).
@@ -159,18 +192,56 @@ labels from $K$ to the same palette.
 \end{itemize}
 
 \subsection{Interfaces and the cycle contradiction (manuscript Sections 7--8)}
+\paragraph{The disk inequality and the label graph.}
+Write $p_i^\varepsilon(q)$ for the fraction of colour $i$ in $B(q,\varepsilon)$.
+For $|q-z|=1$, translate both points by the same vector
+$h\in B(0,\varepsilon)$. Their distance remains one. Almost every such
+translation places both endpoints in the density-one set; the density lemma
+therefore forbids two endpoints of colour $i$. Averaging gives the exact
+inequality $p_i^\varepsilon(q)+p_i^\varepsilon(z)\le1$ for every unit pair
+(manuscript Lemma~7.2). These are dependent shifts, not independently sampled
+endpoints, and the argument does not apply the weak condition directly at a
+possibly exceptional single direction.
+
+These continuous disk proportions lie in the probability simplex. The supplied
+construction fixes $0<\alpha<1/5$ and sets
+\[
+q_i^\varepsilon(z)=
+\frac{(p_i^\varepsilon(z)-\alpha)_+}
+{\sum_j(p_j^\varepsilon(z)-\alpha)_+}.
+\]
+The denominator is positive. Earlier transition analysis and Lemma~7.4 allow
+small disks to be removed so that at most two of the adjusted coordinates are
+positive on the remaining domain. Only then is the map valued in the graph
+$K_5$, the vertices and edges of the simplex. A vector $(1,0,0,0,0)$ is a
+vertex; a vector $(0.7,0.3,0,0,0)$ is a point $30\%$ along its edge.
+This graph is an abstract label space, not five physical points at mutual
+unit distance. The supplied topological construction uses connected inverse
+images, loop information, and limits to obtain physical interfaces.
+
 Proposition~7.1 extracts, from a weak measurable five-colouring, three things:
 \begin{itemize}
 \item a simple cycle of $\ell\in\{3,4,5\}$ labels and a centre $x$;
 \item for each edge $i_ji_{j+1}$ of the cycle, a compact connected $K_j\ni x$ and a direction $v_j$, such that points of $K_j$ approach $x$ from direction $v_j$;
 \item the exclusion: both endpoint labels have closed essential supports disjoint from $\Delta(K_j)$.
 \end{itemize}
+The interfaces and $x$ are constructed together, rather than required at every
+arbitrarily chosen centre. A direction $v_j$ is obtained from points of the
+fixed set $K_j$ approaching $x$; the set does not move and no tangent is assumed.
+The label cycle is not a physical polygon. For example, a cycle $1$--$2$--$3$--$1$
+corresponds to three connected sets, with pairs $\{1,2\}$, $\{2,3\}$ and
+$\{3,1\}$ excluded in their respective straddle regions.
 Lemma~8.1 converts this into one-sided strips. For a direction $e$ not perpendicular to any $v_j$, a thin strip just \emph{outside} the unit circle about $x$ near direction $e$ uses only labels not excluded by the interfaces with $e\cdot v_j>0$. A thin strip just \emph{inside} uses only labels not excluded by those with $e\cdot v_j<0$. Propositions~8.2, 8.5 and~8.10 then exclude cycles of length $5$, $4$ and~$3$:
 \begin{itemize}
 \item length~5: palette rotation rules and the bound of two labels per palette;
 \item length~4: state continuity and projective ray geometry;
 \item length~3: placing the Moser spindle inside a region that uses only three labels, with a rational certificate in manuscript~\S8.6.
 \end{itemize}
+At the finer level used in the slide notes, the five-cycle case has a six-step
+walk on five candidate palette pairs; the four-cycle case obtains a parity
+condition stable under small rotations but reversed by a $60^\circ$ shift.
+The three-cycle case needs a specific graph placement and avoidance of null
+exceptions; an arbitrary open region need not contain the required graph.
 Hence no weak measurable five-colouring exists, and by the transfer no proper one.
 
 \subsection{The map in one table}
@@ -217,6 +288,12 @@ first, and only then is one common good angle chosen.
 \end{enumerate}
 
 \subsection{Counting lemma \st{proved}}
+In the slides use $J=\{1,2\}$, $K=\{3,4\}$ and the leftover label $X=5$.
+At the selected common direction put $P=P_x(t)$, $Q=P_y(t)$ and $R=P_z(t)$.
+Disjointness does not mean these sets are complements or exhaust all five labels.
+For example, $Q=\{5\}$ is individually possible. The contradiction arises when
+both $Q$ and $R$ must contain $5$ while $Q\cap R=\varnothing$.
+
 \begin{lemma}\label{lem:count}
 Let $P,Q,R$ be finite label sets and $J,K$ label sets such that every label outside $J\cup K$ equals $X$. If $J\subseteq P$, the sets $P,Q,R$ are pairwise disjoint, and $Q\not\subseteq K$, $R\not\subseteq K$, we reach a contradiction.
 \end{lemma}
@@ -1209,6 +1286,13 @@ Lesson 3--6 figures match their stated regions & \st{computation} & Section 6; a
 \section{Use of AI tools and how output was checked}
 %======================================================================
 The human workflow used both Codex and Claude to manage project administration and continuously digest reports from the OpenMath OS research swarm and formulate follow-up prompts. The human author then worked with Codex and Claude to understand the mathematical significance of the results and troubleshoot issues, including the Lean pipeline. This was an AI-assisted research and interpretation workflow; it is not a claim that every mathematical or formal step was manually checked by the human author.
+
+The explanation was refined through a question-driven walkthrough: separating
+a trace from the sequence producing it, a palette from the weights in one
+trace, and a lemma's hypotheses from an existence conclusion. The slides
+record the resulting definitions, accepted inputs and deductions. Possessing
+a compiler log and understanding the mathematical significance are distinct
+parts of this workflow.
 
 The archived records identify these tool roles.
 \begin{itemize}
