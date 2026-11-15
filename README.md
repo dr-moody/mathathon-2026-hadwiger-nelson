@@ -8,7 +8,7 @@ This repository assembles the report, teaching slides, and supporting mathematic
 
 ## Reading order
 
-1. [report.pdf](report.pdf) and its self-contained source [report.tex](report.tex): the mathematical account, attribution, declaration-to-claim mappings, and limitations; 27 pages including the original separation-proof appendix.
+1. [report.pdf](report.pdf) and its self-contained source [report.tex](report.tex): the mathematical account, attribution, declaration-to-claim mappings, and limitations; 28 pages including the original separation-proof appendix.
 2. `slides.pdf`: the presentation and reference appendix. This file is being prepared separately and is not present until exported and checked.
 3. [ProofWalkthrough.md](HadwigerNelson/Exposition/ProofWalkthrough.md): the longer staged reader.
 4. [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json): byte-level provenance for the copied supporting material.

@@ -429,6 +429,21 @@ of labels with $\operatorname{supp}_c(j)\cap\Delta(K_i)=\emptyset$ for every
 $j\in F_i$. Then the residual set
 $R=\{j\in[k]: j\notin F_i\text{ for all }i\in\iota\}$ has $|R|\ge3$.
 \end{theorem}
+
+\paragraph{The presentation's six-label example.}
+Relabel the colours $1,\dots,6$. Suppose two actual sets through $x$ have
+selected signed approach directions $40^\circ$ apart, and respectively exclude
+$F_1=\{1,2\}$ and $F_2=\{3,4\}$ from their straddle regions. Then only
+$\{5,6\}$ lies outside $F_1\cup F_2$, contradicting CC60. The diagram is an
+impossible hypothetical configuration, not a colouring. If instead the
+exclusion lists were $\{1,2\}$ and $\{1,3\}$, the surviving set
+$\{4,5,6\}$ would not contradict CC60. On the open straddle regions,
+zero area of a forbidden label is equivalent to disjointness from that
+label's spatial essential support. The theorem counts labels allowed by the
+lists, not labels guaranteed to appear. Its usefulness is to discard a local
+arrangement after the approach and exclusion hypotheses have been established;
+it does not guarantee that a hypothetical six-colouring produces the
+arrangement.
 % SOURCE: CONE/ConeObstruction.lean:148-157 (exact statement); CONE/cone-audit-v3.log:18-25 (printed signature)
 \noindent\emph{Status: proved (paper argument, independently reviewed);
 checked in Lean 4.34.1 (archived logs).}

@@ -2,6 +2,8 @@
 
 Audit of the prepared 43-slide teaching sequence (cover plus 42 teaching slides), with four original-proof appendix slides planned. This maps mathematical content and speaker notes to the self-contained report. It is not a claim that the final PDF export has already been inspected.
 
+Two later-requested cone slides are audited separately below. Their insertion changes subsequent slide numbers; the final exported order will supersede these preparation numbers.
+
 | Slides | Content | Report location |
 | --- | --- | --- |
 | 1–3 | Title, status labels, supplied proof overview | Title block; status-label guide; §§1–2 |
@@ -23,6 +25,8 @@ Audit of the prepared 43-slide teaching sequence (cover plus 42 teaching slides)
 | 41–42 | Human account of AI administration, report prompting, questions and pipeline troubleshooting | §8 |
 | 43 | Dependency ledger for the three-centre argument | §§3.1–3.4 |
 | 44–47 (reference appendix) | Original supplied Lemma 6.3 statement and proof | Appendix A, attributed transcription of supplied manuscript pp36–37 |
+
+The added slides **The closed 60° cone theorem** and **What the cone theorem rules out** are covered by §4, including the finite-family and signed-direction hypotheses, the fact that the generic sets need not be connected or compact, the closed endpoint, the common outer-strip argument, the six-label/40° example and overlapping-pair counterexample to a naive counting inference, historical Lean version, and local-only use.
 
 The deck's numeric palettes use labels 1–5. The report includes that example explicitly; some historical computational examples use labels 0–4. They are relabelings, not different claims.
 

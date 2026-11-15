@@ -6,7 +6,7 @@ Verified against official rules revision `4d6098d263275ff1cb0308908a693e776c116f
 | --- | --- |
 | New isolated GitHub repository | Created privately under `dr-moody` |
 | Problem and track stated | Problem 33; Combinatorics, the official proposed track. Platform selection remains the human team's responsibility. |
-| One self-contained `.tex` and its compiled PDF | PASS: `report.tex` + `report.pdf`, 27 pages, compiled and visually checked |
+| One self-contained `.tex` and its compiled PDF | PASS: `report.tex` + `report.pdf`, 28 pages, compiled and visually checked |
 | Identity / affiliations / repository link only in report title block | Jarom Moody is the supplied identity; no affiliation is invented |
 | Report distinguishes inherited results, event work, evidence, and limitations | PASS: status labels, timestamp scope, historical environment, and limitations explicit |
 | AI tools and how outputs were checked disclosed | Existing report includes the documented tool roles and checks |
