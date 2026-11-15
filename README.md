@@ -8,12 +8,12 @@ This repository assembles the report, teaching slides, and supporting mathematic
 
 ## Reading order
 
-1. `report.pdf` and its self-contained source `report.tex`: the official mathematical account, attribution, declaration-to-claim mappings, and limitations.
+1. [report.pdf](report.pdf) and its self-contained source [report.tex](report.tex): the mathematical account, attribution, declaration-to-claim mappings, and limitations; 26 pages including the original separation-proof appendix.
 2. `slides.pdf`: the presentation and reference appendix. This file is being prepared separately and is not present until exported and checked.
 3. [ProofWalkthrough.md](HadwigerNelson/Exposition/ProofWalkthrough.md): the longer staged reader.
 4. [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json): byte-level provenance for the copied supporting material.
 
-The report and slides are still being assembled. This repository has **not been submitted to the competition**. See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for the remaining concrete checks.
+The report is compiled and visually checked; the new slides are still being assembled. This repository has **not been submitted to the competition**. See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for the remaining concrete checks.
 
 ## What is inherited and what was changed
 
@@ -24,6 +24,8 @@ The source manuscript is included as [references/supplied-paper.pdf](references/
 ## Lean evidence: read the version carefully
 
 The historical files below `HadwigerNelson/Main/ResearchSnapshot/` preserve checks performed on **Lean 4.34.1** with mathlib `d13f23b723b8a846827a245b89c10fc7d3f11612`. The ledger's historical status `LEAN_VERIFIED` refers to that environment. It does not mean the event's optional Lean check has passed. These files are supplementary evidence, not a buildable v4.35.0 submission project at this repository's root.
+
+[historical-lean/](historical-lean/) contains the complete 83-module accepted S2 source tree, pinned historical dependency configuration, and archived checks. This preserves the older version requested for reference if migration is not completed.
 
 The competition requires Lean **v4.35.0** and mathlib **v4.35.0**. A separate migration is being assessed. Only declarations with a successful build, matching statement, and permitted axiom audit will be described as verified under the required environment. Any ported subset will be distinguished from the much larger historical development.
 
@@ -37,7 +39,7 @@ From the repository root, run `tectonic report.tex` (or a LaTeX engine with the 
 
 The official deadline is **15 November 2026, 12:00 PM Pacific**. The repository is private while the package is reviewed; organizer access must be established before submission. A repository link alone does not submit an entry: the human team must upload the repository URL and full final commit hash on the competition platform.
 
-The report title block will identify the frozen supporting-source commit. A later packaging commit contains the PDF compiled from that title block and the presentation. The platform's submitted hash must identify that final packaging commit. These are separate revisions because a file cannot contain the hash of the Git commit that contains that file. This convention is explicit; the published rules do not discuss the self-reference issue.
+The report title block identifies supporting-source commit `a05c6d1d3f75a986c56956ef9cde31d549850475`. A later packaging commit contains the PDF compiled from that title block and the presentation. The platform's submitted hash must identify that final packaging commit. These are separate revisions because a file cannot contain the hash of the Git commit that contains that file. This convention is explicit; the published rules do not discuss the self-reference issue.
 
 Rules audited at `SAIRcompetition/mathathon-judge` revision `4d6098d263275ff1cb0308908a693e776c116f53`:
 
