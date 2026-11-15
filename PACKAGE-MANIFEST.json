@@ -38,5 +38,10 @@
   },
   "historical_project": "historical-lean/",
   "official_rules_commit": "4d6098d263275ff1cb0308908a693e776c116f53",
-  "not_a_submission_receipt": true
+  "not_a_submission_receipt": true,
+  "access_verification": {
+    "visibility": "public",
+    "anonymous_repository_api": true,
+    "checked_utc": "2026-11-15T19:38:05.140553+00:00"
+  }
 }
