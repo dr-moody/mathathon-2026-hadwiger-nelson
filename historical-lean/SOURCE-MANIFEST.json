@@ -1,8 +1,8 @@
 {
-  "meaning": "Complete accepted R1 + S2 source snapshot, copied before port edits; not freshly rebuilt here.",
-  "lean": "4.34.1",
-  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
-  "modules": [
+  "status": "historical Lean 4.34.1 evidence; not Lean 4.35.0 validated",
+  "assembled_from": "accepted R1 complete source tree, overlaid with accepted S2 source files",
+  "module_count": 83,
+  "files": [
     {
       "path": "OAI/Analysis/PlaneSpectrum/Basic.lean",
       "sha256": "6db8eef0290bb1962405e338d049d19a1a77ff9e58a50251ca0aa6835c2b3d16"

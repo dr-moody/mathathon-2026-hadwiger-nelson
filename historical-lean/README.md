@@ -1,9 +1,9 @@
-# Accepted source snapshot: Lean 4.34.1
+# Historical Lean 4.34.1 evidence
 
-These 83 modules assemble the accepted R1 source tree overlaid by the accepted S2 simplification files. Their original source provenance and compiler checks are preserved under `HadwigerNelson/Main/ResearchSnapshot/` in this repository. `SOURCE-MANIFEST.json` lists the assembled source hashes.
+This is the complete accepted S2 source tree: the supplied development with the team's encoding refactor, three-centre replacement, branch-free step ban and reviewed dead-code deletions. It is attributed simplification evidence, not a new formalization of the supplied main theorem.
 
-Historical toolchain: `leanprover/lean4:v4.34.1`. Historical mathlib revision: `d13f23b723b8a846827a245b89c10fc7d3f11612`.
+The archived logs record Lean 4.34.1 with Mathlib commit `d13f23b723b8a846827a245b89c10fc7d3f11612`. They are historical evidence. This directory is **not a claim of compliance with the submission's Lean/Mathlib v4.35.0 requirement**.
 
-This is an archived source snapshot, **not an optional event-compliant Lean project** and not a claim of a fresh rebuild. It was copied before the separate v4.35.0 migration edits. The root theorem and companion upper bound remain supplied results; the report identifies which source changes were made during the project.
+The source tree and exact dependency pins are packaged here for reproducibility. Packaging itself was not a new 4.34.1 rebuild. On a compatible machine, use `lake exe cache get`, then `lake build`. `HistoricalCheck.lean` imports the relevant roots and prints their axiom dependencies.
 
-The final accepted simplification chain is reported as 867 physical lines shorter than the supplied source (126 encoding refactor + 24 three-centre integration + 265 S1 + 452 additional S2). The historical validation records, statement comparison, and standard-axiom audits support that claim in the original environment.
+The source manifest records SHA-256 of every included OAI source file. The archived S2 manifest and logs describe the previous 67-module rebuild and root/statement gates; unchanged dependencies were inherited from the earlier accepted build. Original sources and evidence remain preserved in the parent research repository.
