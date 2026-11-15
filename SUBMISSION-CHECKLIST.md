@@ -19,7 +19,7 @@ Verified against official rules revision `4d6098d263275ff1cb0308908a693e776c116f
 | Repositories accessible to organizers at deadline | PENDING: repository is private; no organizer access has been established |
 | Historical Lean status accurately limited to 4.34.1 | Explicit throughout report and README |
 | Optional project on Lean/mathlib v4.35.0, fixed other dependencies | PASS for `lean/` logical core: Lean 4.35.0, mathlib v4.35.0 pinned but unused, fixed transitive manifest |
-| Claimed optional Lean results build with permitted axioms and unchanged official statement where applicable | PASS for one counting-core declaration only: build exit 0, empty axioms, explicit hypotheses. No claim of formalizing the official global theorem. Analytic migration pending. |
+| Claimed optional Lean results build with permitted axioms and unchanged official statement where applicable | PASS for one counting-core declaration only: build exit 0, empty axioms, explicit hypotheses. No claim of formalizing the official global theorem. Analytic migration was not completed. |
 | Lean declaration/claim differences named | Tables in report; §3.8 distinguishes exact-one-label predicate statement from paper's at-most-one generality and explains analytic hypotheses |
 | Full final submission commit recorded | Final artifact commit is supplied with the handoff; PACKAGE-MANIFEST.json records artifact hashes. Use the full containing commit returned by `git rev-parse HEAD`. |
 | Submitted on platform before noon Pacific | NOT DONE; repository preparation is not submission |
